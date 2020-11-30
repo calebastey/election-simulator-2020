@@ -1,0 +1,231 @@
+.main-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.autovoters {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    height: 0;
+}
+
+.autovoters.autovoter-fade {
+    opacity: 1;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    height: 100%;
+}
+
+.autovoter {
+    margin: 10px;
+    padding: 10px;
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px darkblue solid;
+    border-radius: 4px;
+    /* width: 10%;
+    min-width: 125px;
+    */
+    height: 125px;
+    min-height: 125px;
+    box-shadow: 2px 2px 5px;
+}
+.autovoter-text {
+    align-self: end;
+    text-align: center;
+    width: 100%;
+    font-size: .8rem;
+}
+
+.autovoter img {
+    height: 40px;
+    width: 40px;
+    align-self: center;
+}
+
+.ballot-button {
+    border: 1px darkblue solid;
+    border-radius: 300px;
+    box-shadow: 2px 2px 5px;
+    cursor: pointer;
+}
+
+.autovoter-cost {
+    font-size: 10px;
+    align-self: start;
+}
+
+.ballots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ballot {
+    padding: 10px;
+    margin: 20px;
+}
+
+.vote-count-header {
+    font-size: 20pt;
+}
+
+.vote-count {
+    font-weight: bold;
+}
+
+.blue {
+    color: darkblue;
+}
+
+.red {
+    color: darkred;
+}
+
+.auto-vote-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.auto-vote-enabled {
+    opacity: 1.0;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.voter-log ul {
+    list-style-type: none;
+}
+
+.voter-log ul li {
+    font-family: monospace;
+    font-size: 10pt;
+}
+
+.helper-banner {
+    width: 50%;
+    font-size: 14pt;
+    align: center;
+    margin: 20px auto;
+    height: 40px;
+}
+
+.banner-caveat {
+    font-size: 6pt;
+    margin: -10px 0 20px 0;
+}
+
+.hovering {
+    box-shadow: 2px 0px 14px goldenrod;
+}
+
+.mouseDown {
+    box-shadow: 0px 0px 5px black inset !important;
+}
+
+.tooltip-wrapper {
+    position:relative;
+    display: flex;
+    width: 0;
+    height: 0;
+}
+
+.tooltip {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(200,200,200,1);
+    border: 1px solid black;
+    border-radius: 4px;
+    align-self: center;
+    width: 200px;
+    top: -100px;
+    left: -50px;
+    height: 75px;
+    font-size: 8pt;
+    padding: 4px;
+}
+.tooltip p {
+    align-self: center;
+    padding: 10px;
+}
+
+.no-tooltip {
+    display: none;
+}
+
+.autovoters a {
+    border: none;
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+
+.donation-link {
+    background-color: rgb(173,215,248);
+}
+
+.about-link {
+    font-size: 12pt;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(103,145,178);
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+.about-dialogue {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 80%;
+    width: 80%;
+    padding: 20px;
+    box-shadow: 2px 2px 5px;
+}
+
+.vps-counter {
+    margin-top: 10px;
+
+}
+
+@media (min-width:800px) {
+    .autovoters {
+        width: 80%;
+    }
+    .autovoter {
+        flex: 0 2 15%;
+        margin: 10px 20px;
+    }
+    .about-dialogue {
+        width: 60%;
+    }
+    .about-link {
+        padding-right: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .autovoter img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
